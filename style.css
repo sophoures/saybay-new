@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Battambang:wght@100;300;400;700;900&family=IM+Fell+English+SC&family=Koulen&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size:16px;
+    font-family: 'Koulen', Arial, Helvetica, sans-serif;
+    
+}
+:root{
+    --color-red:#e50914;
+}
+h1,
+h2{
+    font-size:2.2rem;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+}
+span{
+    display: inline-block;
+}
+span,
+div,
+section,
+main,
+nav,
+article,
+i{
+    font-size:1.8rem;
+}
+.container-width{
+    max-width:75%;
+    margin:auto;
+}
+.btn{
+    padding:10px 15px;
+    border:none;
+    border-radius:8px;
+}
+.btn-one{
+    background-color:blue;
+}
+
+/* mobile */
+header{
+    display: none;
+}
+.bx{
+    font-size:2.5rem;
+    color:#fff;
+}
+
+/* tablet */
+@media (min-width:768px){
+    header{
+        background-color: #161616;
+        height:110px;
+        display: block;
+    }
+    .header{
+        height:100%;
+        padding:15px 0;
+    }
+    .header img{
+        width:90px;
+        height:100%;
+    }
+    /* nav */
+    .navigation{
+        background-color: #FA1939;
+    }
+    .nav ul{
+       display: flex;
+       gap:10px;
+    }
+    .nav ul li {
+        padding:10px 15px;
+    }
+    .nav ul li:first-child{
+        background-color: #D90C16;
+    }
+    .nav ul li a{
+        color:#ffff;
+    }
+    /* main */
+    .main{
+        width:100%;
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns:2fr 1fr 1fr;
+        gap:10px;
+        grid-template-areas:
+        "box1 box2 box3"
+        "box4 box5 box6"
+        ;
+        margin:20px auto;
+    }
+    .box1{
+         position: relative;
+        grid-area: box1;
+        background-color: lightcoral;
+    }
+    .box2{
+        grid-area: box2;
+        background-color: lightblue;
+    }
+    .box3{
+        grid-area: box3;
+        background-color: #DDDDDD;
+    }
+    .box4{
+        grid-area: box4;
+        background-color: lightpink;
+    }
+    .box5{
+        grid-area: box5;
+        background-color: lightgray;
+    }
+    .box6{
+        grid-area: box6;
+        background-color:  #DDDDDD;
+    }
+    .box img{
+        width:100%;
+        height:100%;
+        object-fit: cover;
+    }
+    /* reletive */
+    .box1 .reletive{
+        position: absolute;
+        top:10;
+        left:0px;
+        background-color: #38C378;
+        color:#fff;
+        padding:5px 10px;
+    }
+    .box1 .re-bottom{
+        position:absolute;
+        bottom:0px;
+        left:0px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color:#fff;
+        padding:5px 10px;
+        border-radius:5px;
+    }
+    .text{
+        position: absolute;
+        bottom:0px;
+        right:10px;
+        color:#fff;
+        padding:5px 10px;
+        border-radius:5px; 
+    }
+    span{
+        display: none;
+        animation: text 3s infinite ease-in-out;
+    }
+}
