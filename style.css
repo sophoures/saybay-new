@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Battambang:wght@100;300;400;700;900&family=IM+Fell+English+SC&family=Koulen&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bokor&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Siemreap&display=swap');
 *,
 ::before,
 ::after {
@@ -11,7 +11,7 @@ html{
 }
 body{
     font-size:16px;
-    font-family: 'Koulen', Arial, Helvetica, sans-serif;
+    font-family: 'Open Sans', "siemreap", serif;
     
 }
 :root{
@@ -40,7 +40,7 @@ i{
     font-size:1.8rem;
 }
 .container-width{
-    max-width:75%;
+    max-width:100%;
     margin:auto;
 }
 .btn{
@@ -56,13 +56,42 @@ i{
 header{
     display: none;
 }
-.bx{
-    font-size:2.5rem;
-    color:#fff;
+.menu-desktop{
+  display: none;
 }
-
+.mobile {
+  display: block;
+  background-color: black;
+  padding: 5px 10px;
+}
+.mobile > ul {
+  max-width:100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.mobile > ul > li > img {
+  width: 50px;
+  height: 50px;
+}
+.mobile > ul > li > i {
+  color: whitesmoke;
+  font-size: 25px;
+}
+.slid-toggole-moblie{
+    display:none;
+}
+.slid-toggole-moblie{
+    background-color: #FA1939;
+    height:200px;
+    animation:showmenumobile 0.5s ease-in-out forwards;
+}
 /* tablet */
 @media (min-width:768px){
+    .container-width {
+    max-width: 75%;
+    margin: auto;
+     }
     header{
         background-color: #161616;
         height:110px;
@@ -80,18 +109,31 @@ header{
     .navigation{
         background-color: #FA1939;
     }
-    .nav ul{
+    .menu-desktop{
+        display:block;
+    }
+    .nav .menu-desktop{
        display: flex;
        gap:10px;
     }
     .nav ul li {
         padding:10px 15px;
+        font-family:"Open Sans","Bokor",sans-serif;
     }
     .nav ul li:first-child{
         background-color: #D90C16;
     }
     .nav ul li a{
         color:#ffff;
+    }
+    .mobile{
+        display: none;
+    }
+    .slid-toggole-moblie{
+    display: none;
+    }
+    .slid-toggole-moblie{
+        animation:hidmenumobile 0.5s forwards;
     }
     /* main */
     .main{
@@ -165,5 +207,7 @@ header{
     span{
         display: none;
         animation: text 3s infinite ease-in-out;
-    }
+    } 
+
 }
+

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="https://news.sabay.com.kh/img/logo.png">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/9152de16db.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- header -->
@@ -17,8 +18,8 @@
     </header>
     <!-- nav -->
     <nav class="navigation">
-        <nav class="nav container-width">
-            <ul>
+        <nav class="nav container-width ">
+            <ul class="menu-desktop">
                 <li><a href="#"><i class='bx bx-home'></i></a></li>
                 <li><a href="#">កម្សាន្ត</a></li>
                 <li><a href="#">បច្ចេកវិទ្យា</a></li>
@@ -26,6 +27,18 @@
                 <li><a href="#">កីឡា</a></li>
                 <li><a href="#">AUTO TALK</a></li>
             </ul>
+            <div class="mobile">
+                <ul>
+                    <li id="toggle-bar"><i class="fa-solid fa-bars"></i></li>
+                    <li>
+                        <img src="https://news.sabay.com.kh/img/logo.png" alt="">
+                    </li>
+                    <li id="close"></li>
+                </ul>
+            </div>
+            <div class="slid-toggole-moblie" id="mobile-menu">
+                1
+            </div>
         </nav>
     </nav>
     <!-- main -->
@@ -45,3 +58,4 @@
     </main>
 </body>
 </html>
+<script src="app.js"></script>
