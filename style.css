@@ -89,7 +89,7 @@ header{
 /* tablet */
 @media (min-width:768px){
     .container-width {
-    max-width: 75%;
+    max-width: 80%;
     margin: auto;
      }
     header{
@@ -139,75 +139,55 @@ header{
     .main{
         width:100%;
         display: grid;
-        grid-template-rows: auto auto;
-        grid-template-columns:2fr 1fr 1fr;
-        gap:10px;
-        grid-template-areas:
-        "box1 box2 box3"
-        "box4 box5 box6"
-        ;
-        margin:20px auto;
+        grid-template-rows:300px 300px;
+        grid-template-columns:42% 33% auto;
+        margin-top:10px;
     }
+    .box{
+        background-color: red;
+    }
+    /* box */
     .box1{
-         position: relative;
-        grid-area: box1;
-        background-color: lightcoral;
+        background-image: url("https://cdn.sabay.com/cdn/media.sabay.com/media/Rith.file/filenew/68c8ee2b16a58_1757998620_small.png");
+        background-size:100% 100%;
+        background-position: center;
+        background-repeat: no-repeat;
     }
     .box2{
-        grid-area: box2;
-        background-color: lightblue;
+        background-image: url("https://cdn.sabay.com/cdn/media.sabay.com/media/Rith.file/fileSpec/68c3e5e8839aa_1757668800_small.png");
+        background-size:100% 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        
     }
     .box3{
-        grid-area: box3;
+        padding:5px;
+        width:98%;
+        height:99%;
         background-color: #DDDDDD;
+        margin-bottom:.5%;
+        margin-left:2%;
     }
     .box4{
-        grid-area: box4;
-        background-color: lightpink;
+        background-image: url("https://cdn.sabay.com/cdn/media.sabay.com/media/Rith.file/fileSpec/68c3d53b39744_1757664540_small.png");
+        background-size:100% 100%;
+        background-position: center;
+        background-repeat: no-repeat;
     }
     .box5{
-        grid-area: box5;
-        background-color: lightgray;
+        background-image: url("https://cdn.sabay.com/cdn/media.sabay.com/media/Rith.file/fileSpec/68c12cb3b869b_1757490300_small.png");
+        background-size:100% 100%;
+        background-position: center;
+        background-repeat: no-repeat;
     }
     .box6{
-        grid-area: box6;
-        background-color:  #DDDDDD;
+        margin-top:1%;
+        width:98%;
+        height:99%;
+        background-color: #DDDDDD;
+        margin-left:2%;
+        padding:5px;
     }
-    .box img{
-        width:100%;
-        height:100%;
-        object-fit: cover;
-    }
-    /* reletive */
-    .box1 .reletive{
-        position: absolute;
-        top:10;
-        left:0px;
-        background-color: #38C378;
-        color:#fff;
-        padding:5px 10px;
-    }
-    .box1 .re-bottom{
-        position:absolute;
-        bottom:0px;
-        left:0px;
-        background-color: rgba(0, 0, 0, 0.5);
-        color:#fff;
-        padding:5px 10px;
-        border-radius:5px;
-    }
-    .text{
-        position: absolute;
-        bottom:0px;
-        right:10px;
-        color:#fff;
-        padding:5px 10px;
-        border-radius:5px; 
-    }
-    span{
-        display: none;
-        animation: text 3s infinite ease-in-out;
-    } 
 
 }
 
