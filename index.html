@@ -8,6 +8,58 @@
     <link rel="icon" href="https://news.sabay.com.kh/img/logo.png">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/9152de16db.js" crossorigin="anonymous"></script>
+    <style>
+    swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+
+    swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #444;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .autoplay-progress {
+      position: absolute;
+      right: 16px;
+      bottom: 16px;
+      z-index: 10;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: var(--swiper-theme-color);
+    }
+
+    .autoplay-progress svg {
+      --progress: 0;
+      position: absolute;
+      left: 0;
+      top: 0px;
+      z-index: 10;
+      width: 100%;
+      height: 100%;
+      stroke-width: 4px;
+      stroke: var(--swiper-theme-color);
+      fill: none;
+      stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+      stroke-dasharray: 125.6;
+      transform: rotate(-90deg);
+    }
+  </style>
 </head>
 <body>
     <!-- header -->
@@ -45,23 +97,69 @@
     <main class="main container-width">
         <div class="box1 hover-text">
             <div class="text">CEO វ័យ ១៨ឆ្នាំ រៀនសរសេរកូដតាំងពីអាយុ ៧ឆ្នាំ ឥឡូវនេះ មាន App AI រកលុយបាន ខ្ទង់លានដុល្លារ</div>
+            <div class="hide">CEO វ័យ ១៨ឆ្នាំ រៀនសរសេរកូដតាំងពីអាយុ ៧ឆ្នាំ ឥឡូវនេះ មាន App AI រកលុយបាន ខ្ទង់លានដុល្លារ</div>
             <span class="date"> អង្គារ, 16 កញ្ញា 2025 12:01</span>
         </div>
         <div class="box2 hover-text">
             <div class="text">អាកាសយានដ្ឋាន អន្តរជាតិតេជោ មានបន្ទះសូឡា ជាង ១ពាន់បន្ទះ ផលិតថាមពលបាន ១២០ លានគីឡូវ៉ាត់ម៉ោង</div>
+            <div class="hide">អាកាសយានដ្ឋាន អន្តរជាតិតេជោ មានបន្ទះសូឡា ជាង ១ពាន់បន្ទះ ផលិតថាមពលបាន ១២០ លានគីឡូវ៉ាត់ម៉ោង</div>
              <span class="date"> សុក្រ, 12 កញ្ញា 2025 16:24</span>
         </div>
         <div class="box3 "></div>
         <div class="box4 hover-text">
             <div class="text">ផ្លែទំពាំងបាយជូរ មួយប្រភេទ មានរសជាតិផ្អែមឆ្ងាញ់ ពីធម្មជាតិ កំពុងពេញនិយម វាយលុកទីផ្សារកសិផល</div>
+            <div class="hide">ផ្លែទំពាំងបាយជូរ មួយប្រភេទ មានរសជាតិផ្អែមឆ្ងាញ់ ពីធម្មជាតិ កំពុងពេញនិយម វាយលុកទីផ្សារកសិផល</div>
              <span class="date"> សុក្រ, 12 កញ្ញា 2025 15:11</span>
         </div>
         <div class="box5 hover-text">
             <div class="text">៣ ជម្រើសល្អៗ ងាយស្រួលធ្វើដំណើរ ពីអាកាសយានដ្ឋានអន្តរជាតិតេជោ ទៅកាន់កណ្តាល រាជធានីភ្នំពេញ</div>
+            <div class="hide">៣ ជម្រើសល្អៗ ងាយស្រួលធ្វើដំណើរ ពីអាកាសយានដ្ឋានអន្តរជាតិតេជោ ទៅកាន់កណ្តាល រាជធានីភ្នំពេញ</div>
             <span class="date"> ពុធ, 10 កញ្ញា 2025 14:53</span>
         </div>
         <div class="box6 "></div>
     </main>
+    <!-- mobile slide -->
+     <div class="slide-mobile">
+        <swiper-container class="mySwiper"
+          pagination="true" 
+          pagination-clickable="true" 
+          navigation="true"
+          space-between="0"
+          centered-slides="true"
+          autoplay-delay="2500" 
+          autoplay-disable-on-interaction="false">
+    <swiper-slide>Slide 1</swiper-slide>
+    <swiper-slide>Slide 2</swiper-slide>
+    <swiper-slide>Slide 3</swiper-slide>
+    <swiper-slide>Slide 4</swiper-slide>
+    <swiper-slide>Slide 5</swiper-slide>
+    <swiper-slide>Slide 6</swiper-slide>
+    <swiper-slide>Slide 7</swiper-slide>
+    <swiper-slide>Slide 8</swiper-slide>
+    <swiper-slide>Slide 9</swiper-slide>
+    <div class="autoplay-progress" slot="container-end">
+      <svg viewBox="0 0 48 48">
+        <circle cx="24" cy="24" r="20"></circle>
+      </svg>
+      <span></span>
+    </div>
+  </swiper-container>
+     </div>
 </body>
 </html>
+ <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    const progressCircle = document.querySelector(".autoplay-progress svg");
+    const progressContent = document.querySelector(".autoplay-progress span");
+
+    const swiperEl = document.querySelector("swiper-container");
+    swiperEl.addEventListener("autoplaytimeleft", (e) => {
+      const [swiper, time, progress] = e.detail;
+      progressCircle.style.setProperty("--progress", 1 - progress);
+      progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+    });
+  </script>
 <script src="app.js"></script>
