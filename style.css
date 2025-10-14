@@ -105,8 +105,17 @@ header{
      position: absolute;
      left:0;
      bottom:0;
+     color:#ffff;
+     font-weight: bold;
+     font-size:18px;
 }
-
+/* <!-- content-two in main --> */
+.Category-Video{
+    display: none;
+}
+.main-section{
+    display: none;
+}
 /* tablet */
 @media (min-width:768px){
     .container-width {
@@ -129,6 +138,9 @@ header{
     /* nav */
     .navigation{
         background-color: #FA1939;
+        position:sticky;
+        top:0;
+        z-index: 1000;
     }
     .menu-desktop{
         display:block;
@@ -270,10 +282,33 @@ header{
     .slide-mobile{
         display: none;
     }
-    /* content in main */
+/* red underline */
+.Category-Video {
+  border-bottom: 3px solid #f44336; 
+  /* margin: 20px; */
+  margin-top: 20px;
+  margin-bottom: 5px;
+  display: block;
+}
+.tab-video {
+  display: inline-block;
+  background: #f44336;
+  color: #fff;
+  font-weight: bold;
+  padding:2px 30px;
+  position: relative;
+  clip-path: polygon(0 0, 90% 0, 100% 100%, 0 100%)                         ;
+}
+
+.tab-video span {
+  font-size: 20px;
+}
+/* content in main */
     .main-section{
-        padding:20px;
-        margin-top:30px;
+        margin-top:20px;
+        display: block;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        padding:10px;
 
     }
     .gride-main-section{
@@ -285,21 +320,38 @@ header{
         "child-main-section child-main-section child-main-section"
         ;
         gap:10px;
+        background-color: #FFFFFF;
     }
+    /* .main-left */
     .main-left{
-        background-color: red;
         grid-area:main-left;
     }
+    .image{
+        width:100%;
+        height:70%;
+        transition: all 0.3s;
+        background-color: #161616;
+    }
+    .main-hover:hover>.image img{
+        cursor: pointer;
+        transform: scale(.98);
+    }
+    .image img{
+        width:100%;
+        height:100%;
+        object-fit: cover;
+    }
+    /* .main-center */
     .main-center{
-        background-color: blue;
         grid-area:main-center;
     }
+     /* .main-right */
     .main-right{
-        background-color:green;
         grid-area:main-right;
-    }
+    } 
+     /* .child-main-section */
+
     .child-main-section{
-        background-color: pink;
         width:80%;
         grid-area: child-main-section;
         display: grid;
@@ -307,9 +359,8 @@ header{
         grid-template-columns:repeat(4,1fr);
     }
     .item-child-section{
-        background-color: black;
-        margin:10px;
-    }  
+        margin:5px; 
+    } 
 
 }
 @media(min-width:1024px){
